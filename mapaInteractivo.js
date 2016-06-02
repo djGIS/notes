@@ -1246,7 +1246,7 @@ document.getElementById("HelpBuscador").style.display = 'none';
 		map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(controles);
 	}
 	
-	// Funciones a ejecutar al incializar
+	// Funciones a ejecutar al cargar la pagina
 	//google.maps.event.addDomListener(body, 'load', formControls);
 	google.maps.event.addDomListener(window, 'load', getData(vinculo_dbPOI));
 	//google.maps.event.addDomListener(window, 'load', getRestricciones(vinculo_dbRestricciones));
