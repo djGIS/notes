@@ -1,5 +1,3 @@
-<script>
-
 var myCenter = new google.maps.LatLng(-34.8, -63.5);
 var myZoom = 6;
 var geocoder;
@@ -1254,5 +1252,3 @@ document.getElementById("HelpBuscador").style.display = 'none';
 	//google.maps.event.addDomListener(window, 'load', getRestricciones(vinculo_dbRestricciones));
 	//google.maps.event.addDomListener(window, 'load', getEstado(vinculo_dbPartesDNV));
 	google.maps.event.addDomListener(window, 'load', initialize);
-
-</script>
