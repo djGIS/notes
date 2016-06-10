@@ -1,0 +1,22 @@
+There is a good workaround for this, now, by using rawgit.com.
+
+Steps:
+
+Find your link on GitHub, and click to the "Raw" version of the file.
+Copy the URL, and link to it.
+Change raw.githubusercontent.com to rawgit.com (non-production) or cdn.rawgit.com (production)
+Example: http://raw.githubusercontent.com/user/repo/branch/file.js
+
+For non-production environments, such as jsFiddle, replace raw.github.com with rawgit.com:
+
+http://rawgit.com/user/repo/branch/file.js
+For production environments, replace raw.githubusercontent.com with cdn.rawgit.com:
+
+http://cdn.rawgit.com/user/repo/tag/file.js
+Also note that for production environments, consider targeting a specific tag - not the branch, to ensure you're getting the specific version of the file that you expect, rather than the head version, which will change over time.
+
+Why is this needed?
+
+GitHub started using X-Content-Type-Options: nosniff, which instructs more modern browsers to enforce strict MIME type checking. It then returns the raw files in a MIME type returned by the server - preventing the browser from using the file as-intended (if the browser honors the setting).
+
+For background on this topic, please refer to this discussion thread.
